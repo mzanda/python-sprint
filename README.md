@@ -4,6 +4,12 @@ A scaffolded repository for an 8‑week Python sprint focused on writing **clean
 It includes a standard layout (`src/`, `tests/`, `notebooks/`), tooling (pytest, black, flake8, mypy),
 and a GitHub Actions workflow to run tests on every push.
 
+
+## 📌 Project Board
+
+You can track my 8-week Python Sprint progress here:  
+👉 [View the Project Board](https://github.com/users/mzanda/projects/1)
+
 ## Quickstart
 
 ```bash
