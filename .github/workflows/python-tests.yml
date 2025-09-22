@@ -1,0 +1,28 @@
+name: Python tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install package + dev deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Lint (flake8) and format check (black)
+        run: |
+          black --check .
+          flake8
+      - name: Type check (mypy)
+        run: |
+          mypy src
+      - name: Run tests
+        run: |
+          pytest -q --cov=src --cov-report=term-missing
