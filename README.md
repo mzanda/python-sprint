@@ -55,6 +55,11 @@ mypy src
 - **Type hints** + **mypy** for stricter code quality.
 - CI is set up to run `pytest` on push/PR; extend it as needed.
 
+## 🛠️ Project Management Scripts
+
+The [`tools/`](tools/) folder contains helper scripts (e.g., for bootstrapping GitHub Issues).
+They are separate from the core `src/` code and exist to document the workflow.
+
 ## Week Folders (optional)
 If you prefer, create a folder per week under `src/` (e.g., `src/week1_text_utils/`) with a matching `tests/test_week1_text_utils.py` file.
 Keep imports **package‑style**, not relative to scripts.
